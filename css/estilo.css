@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*--Cabeçalho------------------------------------------------------------------------------------------------*/
+
+header#cabecalho {height: 150px;}
+
+header#cabecalho div#banner {
+    background: #001e31;
+    height: 150px;
+    text-align: center;
+}
+
+header#cabecalho div#banner h1#tituloBanner {
+    margin: 0;
+    padding-top: 40px;
+    font-size: 2.7em;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+}
+
+header#cabecalho div#perfil {height: 0;}
+
+header#cabecalho div#perfil img {
+    border-radius: 100%;
+    border: 5px solid white;
+    width: 180px;
+    position: relative;
+    top: -100px;
+    left: 90px;
+}
+
+header#cabecalho h1#nome {
+    margin: 0;
+    position: relative;
+    top: -35px;
+    left: 290px;
+    display: inline-block;
+    color: whitesmoke;
+}
+
+/*--Menu lateral---------------------------------------------------------------------------------------------------------------------------*/
+
+aside#menu {
+    width: 30%;
+    min-width: 400px;
+    background: rgb(34, 42, 54);
+    display: inline-block;
+}
+
+aside#menu nav#navegacao {
+    background: rgb(59, 62, 66);
+    cursor: pointer;
+}
+
+aside#menu nav#navegacao:hover {
+    transition: 200ms;
+    background: rgb(77, 81, 87);
+}
+
+aside#menu nav#navegacao div#voltarPagina {
+    color: whitesmoke;
+    font-size: 2em;
+    text-align: right;
+    margin-right: 30px;
+}
+
+aside#menu a {
+    text-decoration: none;
+}
+
+aside#menu div.opcMenu {
+    color: white;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+}
+
+aside#menu div.opcMenu h1 {
+    margin: 0;
+}

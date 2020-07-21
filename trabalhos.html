@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        section#corpo {
+            user-select: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        section#corpo div.anoPasta header.preview {
+            background: rgb(66, 70, 75);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            padding: 5px 20px 5px 20px;
+            cursor: pointer;
+        }
+
+        section#corpo div.anoPasta header.preview img.iconPasta {
+            height: 18px;
+        }
+
+        section#corpo div.anoPasta header.preview h4.ano {
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            margin-left: 20px;
+        }
+
+        section#corpo div.anoPasta header.preview div.buttonDownloadPasta, section#corpo div.anoPasta section.conteudoPasta div.arquivo div.buttonDownloadArquivo {
+            color: rgba(255, 255, 255, 0.9);
+            float: right;
+        }
+
+        section#corpo div.anoPasta header.preview div.buttonDownloadPasta:hover, section#corpo div.anoPasta section.conteudoPasta div.arquivo div.buttonDownloadArquivo:hover {
+            color: rgb(0, 119, 255);
+        }
+
+        section#corpo div.anoPasta section.conteudoPasta {
+            display: none;
+        }
+
+        section#corpo div.anoPasta section.conteudoPasta div.arquivo {
+            background: rgb(48, 51, 54);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 5px 20px 5px 50px;
+        }
+
+        section#corpo div.anoPasta section.conteudoPasta div.arquivo img.iconArquivo {
+            height: 18px;
+        }
+
+        section#corpo div.anoPasta section.conteudoPasta div.arquivo h4.nomeArquivo {
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            margin-left: 20px;
+            vertical-align: 0.2em;
+        }
+
+        section#corpo div.anoPasta section.conteudoPasta div.arquivo div.dataArquivo {
+            color: rgba(255, 255, 255, 0.7);
+            float: right;
+            margin-right: 20px;
+        }
+
+        @media (max-width: 800px) {
+            section#corpo div.anoPasta header.preview h4.ano, section#corpo div.anoPasta section.conteudoPasta div.arquivo h4.nomeArquivo {
+                margin-left: 5px;
+            }
+
+            section#corpo div.anoPasta section.conteudoPasta div.arquivo {
+                background: rgb(48, 51, 54);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                padding: 5px 20px 5px 20px;
+            }
+
+            section#corpo div.anoPasta section.conteudoPasta div.arquivo div.dataArquivo {
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        
+        <header id="cabecalho">
+            <div id="banner"></div>
+            <div id="perfil">
+                <img src="image/perfil.webp" alt="Foto de Perfil">
+                <h1 id="nome">JOÃO VICTOR (MILK)</h1>
+            </div>
+            
+        </header>
+
+        <aside id="menu">
+            <nav id="navegacao">
+                <div id="voltarPagina" onclick="">&leftarrow;</div>
+            </nav>
+            <a href="index.html"><div class="opcMenu">
+                <img src="image/artigos.svg">
+                <h1>Artigos</h1>
+            </div></a>
+            <a href="projetos.html"><div class="opcMenu">
+                <img src="image/projetos.svg">
+                <h1>Projetos</h1>
+            </div></a>
+            <a href="trabalhos.html"><div class="opcMenu">
+                <img src="image/trabalhos.svg">
+                <h1>Trabalhos</h1>
+            </div></a>
+            <a href="sobre.html"><div class="opcMenu">
+                <img src="image/sobre.svg">
+                <h1>Sobre</h1>
+            </div></a>
+            <a href="creditos.html"><div class="opcMenu">
+                <img src="image/creditos.svg">
+                <h1>Créditos</h1>
+            </div></a>
+        </aside>
+
+        <section id="corpo">
+            <div id="caminho">
+                <p>Trabalhos</p>
+            </div>
+
+            <!--<div class="anoPasta">
+                <header class="preview" onclick="abrirPasta('2020')">
+                    <img src="image/pastaFechada.svg" class="iconPasta" id="iconPasta2020">
+                    <h4 class="ano">2020</h4>
+                    <a href=""><div class="buttonDownloadPasta">Download</div></a>
+                </header>
+
+                <section class="conteudoPasta" id="conteudoPasta2020">
+
+                </section>
+            </div>-->
+
+            <div class="anoPasta">
+                <header class="preview" onclick="abrirPasta('2019')">
+                    <img src="image/pastaFechada.svg" class="iconPasta" id="iconPasta2019">
+                    <h4 class="ano">2019</h4>
+                    <a href="download/Trabalhos 2019.zip"><div class="buttonDownloadPasta">Download</div></a>
+                </header>
+
+                <section class="conteudoPasta" id="conteudoPasta2019">
+
+                    <a href="data/documents/Estupro.pdf"><div class="arquivo">
+                        <img src="image/pdfFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Estupro.pdf</h4>
+                        <a href="download/Estupro.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">25/11/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Rack - Desenho Técnico.pdf"><div class="arquivo">
+                        <img src="image/pdfFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Rack - Desenho Técnico.pdf</h4>
+                        <a href="download/Rack - Desenho Técnico.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">04/11/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Rack - Desenho Técnico.pptx"><div class="arquivo">
+                        <img src="image/pptxFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Rack - Desenho Técnico.pptx</h4>
+                        <a href="download/Rack - Desenho Técnico.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">04/11/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Discord.pdf"><div class="arquivo">
+                        <img src="image/pdfFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Discord.pdf</h4>
+                        <a href="download/Discord.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">24/10/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Discord.pptx"><div class="arquivo">
+                        <img src="image/pptxFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Discord.pptx</h4>
+                        <a href="download/Discord.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">24/10/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Cultura Gamer.pdf"><div class="arquivo">
+                        <img src="image/pdfFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Cultura Gamer.pdf</h4>
+                        <a href="download/Cultura Gamer.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">21/10/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Cultura Gamer.pptx"><div class="arquivo">
+                        <img src="image/pptxFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Cultura Gamer.pptx</h4>
+                        <a href="download/Cultura Gamer.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">21/10/2019</div>
+                    </div></a>
+
+                    <a href="data/video/Leis de Newton.mp4"><div class="arquivo">
+                        <img src="image/mp4File.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Leis de Newton.mp4</h4>
+                        <a href="download/Leis de Newton.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">21/08/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Classicismo.pdf"><div class="arquivo">
+                        <img src="image/pdfFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Classicismo.pdf</h4>
+                        <a href="download/Classicismo.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">14/08/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Luta.pdf"><div class="arquivo">
+                        <img src="image/pdfFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Luta.pdf</h4>
+                        <a href="download/Luta.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">29/05/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Luta.pptx"><div class="arquivo">
+                        <img src="image/pptxFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Luta.pptx</h4>
+                        <a href="download/Luta.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">29/05/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Tutorial - Portugues.pdf"><div class="arquivo">
+                        <img src="image/pdfFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Tutorial - Português.pdf</h4>
+                        <a href="download/Tutorial - Portugues.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">20/05/2019</div>
+                    </div></a>
+
+                    <a href="data/documents/Tutorial - Portugues.pptx"><div class="arquivo">
+                        <img src="image/pptxFile.svg" class="iconArquivo">
+                        <h4 class="nomeArquivo">Tutorial - Português.pptx</h4>
+                        <a href="download/Tutorial - Portugues.zip"><div class="buttonDownloadArquivo">Download</div></a>
+                        <div class="dataArquivo">20/05/2019</div>
+                    </div></a>
+                </section>
+            </div>
+
+            <!--<div class="anoPasta">
+                <header class="preview" onclick="abrirPasta('2018')">
+                    <img src="image/pastaFechada.svg" class="iconPasta" id="iconPasta2018">
+                    <h4 class="ano">2018</h4>
+                    <a href=""><div class="buttonDownloadPasta">Download</div></a>
+                </header>
+
+                <section class="conteudoPasta" id="conteudoPasta2018">
+                    
+                </section>
+            </div>
+
+            <div class="anoPasta">
+                <header class="preview" onclick="abrirPasta('2017')">
+                    <img src="image/pastaFechada.svg" class="iconPasta" id="iconPasta2017">
+                    <h4 class="ano">2017</h4>
+                    <a href=""><div class="buttonDownloadPasta">Download</div></a>
+                </header>
+
+                <section class="conteudoPasta" id="conteudoPasta2017">
+                    
+                </section>
+            </div>
+
+            <div class="anoPasta">
+                <header class="preview" onclick="abrirPasta('2016')">
+                    <img src="image/pastaFechada.svg" class="iconPasta" id="iconPasta2016">
+                    <h4 class="ano">2016</h4>
+                    <a href=""><div class="buttonDownloadPasta">Download</div></a>
+                </header>
+
+                <section class="conteudoPasta" id="conteudoPasta2016">
+                    
+                </section>
+            </div>-->
+            
+        </section>
+
+        <footer id="rodape" hidden>
+            <section id="creditos">
+                <a href="https://br.freepik.com/fotos-vetores-gratis/fundo" target="_blank">Fundo vetor criado por davidzydd - br.freepik.com</a>
+            </section>
+        </footer>
+
+    </main>
+
+    <script>
+        function abrirPasta(ano) {
+            var conteudoPasta = document.getElementById(`conteudoPasta${ano}`)
+            var iconPasta = document.getElementById(`iconPasta${ano}`)
+            
+            if(window.getComputedStyle(conteudoPasta).getPropertyValue('display') == 'none') {
+                conteudoPasta.style.display = 'block'
+                iconPasta.src = 'image/pastaAberta.svg'
+            } else {
+                conteudoPasta.style.display = 'none'
+                iconPasta.src = 'image/pastaFechada.svg'
+            }
+        }
+    </script>
+</body>
+</html>

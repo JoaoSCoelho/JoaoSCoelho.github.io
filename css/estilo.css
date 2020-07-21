@@ -1,53 +1,53 @@
 body {
     margin: 0;
+    background: rgb(34, 34, 34);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/*--Cabeçalho------------------------------------------------------------------------------------------------*/
-
-header#cabecalho {height: 150px;}
-
-header#cabecalho div#banner {
-    background: #001e31;
-    height: 150px;
-    text-align: center;
+main {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
 }
 
-header#cabecalho div#banner h1#tituloBanner {
-    margin: 0;
-    padding-top: 40px;
-    font-size: 2.7em;
-    color: white;
-    text-shadow: 5px 5px 10px black;
+/*--Cabeçalho------------------------------------------------------------------------------------------------------------------------------*/
+
+header#cabecalho {height: 150px; user-select: none;}
+
+header#cabecalho div#banner {
+    background: url(../image/background.svg);
+    background-size: auto 200%;
+    height: 150px;
 }
 
 header#cabecalho div#perfil {height: 0;}
 
 header#cabecalho div#perfil img {
     border-radius: 100%;
-    border: 5px solid white;
-    width: 180px;
+    border: 3px solid white;
+    width: 150px;
     position: relative;
     top: -100px;
-    left: 90px;
+    left: 5%;
 }
 
-header#cabecalho h1#nome {
+header#cabecalho div#perfil h1#nome {
     margin: 0;
-    position: relative;
-    top: -35px;
-    left: 290px;
+    color: rgba(255, 255, 255, 0.9);
     display: inline-block;
-    color: whitesmoke;
+    position: relative;
+    top: -165px;
+    left: 6%;
 }
 
 /*--Menu lateral---------------------------------------------------------------------------------------------------------------------------*/
 
 aside#menu {
     width: 30%;
-    min-width: 400px;
     background: rgb(34, 42, 54);
     display: inline-block;
+    user-select: none;
 }
 
 aside#menu nav#navegacao {
@@ -61,7 +61,7 @@ aside#menu nav#navegacao:hover {
 }
 
 aside#menu nav#navegacao div#voltarPagina {
-    color: whitesmoke;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 2em;
     text-align: right;
     margin-right: 30px;
@@ -72,13 +72,103 @@ aside#menu a {
 }
 
 aside#menu div.opcMenu {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
     text-align: center;
     margin: 10px;
-    box-shadow: 0px 0px 10px black;
-    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    background: rgb(34, 41, 51);
 }
+
+aside#menu div.opcMenu:hover {box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.5);}
 
 aside#menu div.opcMenu h1 {
     margin: 0;
+}
+
+/*--Corpo----------------------------------------------------------------------------------------------------------------------------------*/
+
+section#corpo {
+    width: 70%;
+    float: right;
+    background: rgb(27, 33, 41);
+}
+
+section#corpo div#caminho {
+    background: rgb(77, 81, 87);
+    color: rgba(255, 255, 255, 0.7);
+    text-align: right;
+    padding: 8px 20px 8px 0px;
+}
+
+section#corpo div#caminho p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+@media (max-width: 800px) {
+
+    header#cabecalho div#perfil img {
+        top: 5px;
+        width: 100px;
+        position: absolute;
+        left: calc(50% - 50px);
+    }
+
+    header#cabecalho div#perfil h1#nome {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+        display: inline-block;
+        position: absolute;
+        top: 120px;
+        left: calc(50% - 102px);
+        font-size: 1.5em;
+    }
+
+    aside#menu {
+        width: 72px;
+        height: 100%;
+    }
+
+    aside#menu nav#navegacao div#voltarPagina {
+        transform: rotate(180deg);
+        margin-left: 50px;
+    }
+
+    aside#menu div.opcMenu {
+        width: 32px;
+    }
+
+    aside#menu div.opcMenu h1 {
+        display: none;
+    }
+
+    section#corpo {
+        width: calc(100% - 72px);
+        height: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    aside#menu {
+        width: 100%;
+        min-height: min-content;
+        text-align: center;
+    }
+
+    aside#menu nav#navegacao {
+        display: none;
+    }
+
+    aside#menu div.opcMenu {
+        display: inline-block;
+        margin: 0;
+        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    section#corpo {
+        width: 100%;
+        min-height: max-content;
+    }
 }

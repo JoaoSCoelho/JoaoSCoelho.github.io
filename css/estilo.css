@@ -7,8 +7,9 @@ body {
 main {
     margin-left: auto;
     margin-right: auto;
-    height: 100%;
-    width: 100%;
+    height: max-content;
+    min-height: calc(100vh - 150px);
+    display: flex;
 }
 
 /*--Cabeçalho------------------------------------------------------------------------------------------------------------------------------*/
@@ -44,27 +45,15 @@ header#cabecalho div#perfil h1#nome {
 /*--Menu lateral---------------------------------------------------------------------------------------------------------------------------*/
 
 aside#menu {
-    width: 30%;
     background: rgb(34, 42, 54);
     display: inline-block;
     user-select: none;
+    flex-basis: 30%;
 }
 
 aside#menu nav#navegacao {
     background: rgb(59, 62, 66);
-    cursor: pointer;
-}
-
-aside#menu nav#navegacao:hover {
-    transition: 200ms;
-    background: rgb(77, 81, 87);
-}
-
-aside#menu nav#navegacao div#voltarPagina {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 2em;
-    text-align: right;
-    margin-right: 30px;
+    height: 39px;
 }
 
 aside#menu a {
@@ -81,9 +70,24 @@ aside#menu div.opcMenu {
 }
 
 aside#menu div.opcMenu:hover {box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.5);}
+aside#menu div.opcMenu:hover div.infoOpcMenu{
+    transition-delay: 500ms;
+    transition-property: all;
+    color: black;
+    background: white;
+}
 
 aside#menu div.opcMenu h1 {
     margin: 0;
+}
+
+aside#menu div.infoOpcMenu {
+    background: rgba(0, 0, 0, 0);
+    color: rgba(0,0,0,0);
+    font-size: 0.9em;
+    position: absolute;
+    left: -30%;
+    padding: 1px 5px;
 }
 
 /*--Corpo----------------------------------------------------------------------------------------------------------------------------------*/
@@ -126,13 +130,12 @@ section#corpo div#caminho p {
     }
 
     aside#menu {
-        width: 72px;
-        height: 100%;
+        flex-basis: 72px;
     }
 
     aside#menu nav#navegacao div#voltarPagina {
         transform: rotate(180deg);
-        margin-left: 50px;
+        text-align: left;
     }
 
     aside#menu div.opcMenu {
@@ -143,16 +146,22 @@ section#corpo div#caminho p {
         display: none;
     }
 
+    aside#menu div.infoOpcMenu {
+        left: 72px;
+    }
+
     section#corpo {
         width: calc(100% - 72px);
-        height: 100%;
     }
 }
 
 @media (max-width: 400px) {
+    main {
+        display: block;
+    }
+
     aside#menu {
         width: 100%;
-        min-height: min-content;
         text-align: center;
     }
 
@@ -167,8 +176,11 @@ section#corpo div#caminho p {
         border: 1px solid rgba(255, 255, 255, 0.5);
     }
 
+    aside#menu div.infoOpcMenu {
+        display: none;
+    }
+
     section#corpo {
         width: 100%;
-        min-height: max-content;
     }
 }

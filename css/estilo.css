@@ -12,6 +12,10 @@ main {
     display: flex;
 }
 
+img {
+    user-select: none;
+}
+
 /*--Cabeçalho------------------------------------------------------------------------------------------------------------------------------*/
 
 header#cabecalho {height: 150px; user-select: none;}

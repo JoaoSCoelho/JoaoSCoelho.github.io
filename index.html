@@ -3,100 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <title>Oque deseja?</title>
     <style>
-        div#conteudo {
-            padding: 10px 50px;
+        html, body {
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(image/background.svg);
+            background-size: auto 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
             text-align: center;
-            font-size: 1.1em;
+            color: white;
         }
 
-        div#conteudo article {
-            color: rgba(255, 255, 255, 0.9);
+        h1 {
+            text-shadow: 5px 5px 10px black;
+            font-size: 3rem;
         }
 
-        div#conteudo article p {
-            text-align: justify;
+        a {
+            border-radius: 50rem;
+            background: white;
+            padding: 1rem 2rem;
+            color: rgb(17,17,17);
+            margin: 0.5rem;
+            text-decoration: none;
+            font-weight: bolder;
+            box-shadow: 5px 5px 10px black;
+            display: inline-block;
         }
 
-        div#conteudo article div#redesSociais img {
-            height: 60px;
-            margin: 0px 10px;
+        a:hover {
+            transition: 200ms;
+            box-shadow: none;
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                font-size: 80%;
+            }
         }
     </style>
 </head>
 <body>
-        
-    <header id="cabecalho">
-        <div id="banner"></div>
-        <div id="perfil">
-            <img src="image/perfil.webp" alt="Foto de Perfil">
-            <h1 id="nome">JOÃO VICTOR (MILK)</h1>
-        </div>
-        
-    </header>    
-    
     <main>
-
-        <aside id="menu">
-            <nav id="navegacao">
-                <div id="voltarPagina"></div>
-            </nav>
-            <a href="artigos.html"><div class="opcMenu" hidden>
-                <img src="image/artigos.svg">
-                <h1>Artigos</h1>
-                <div class="infoOpcMenu" id="infoOpcMenuArtigos">Artigos</div>
-            </div></a>
-
-            <a href="projetos.html"><div class="opcMenu">
-                <img src="image/projetos.svg">
-                <h1>Projetos</h1>
-                <div class="infoOpcMenu" id="infoOpcMenuProjetos">Projetos</div>
-            </div></a>
-
-            <a href="trabalhos.html"><div class="opcMenu">
-                <img src="image/trabalhos.svg">
-                <h1>Trabalhos</h1>
-                <div class="infoOpcMenu" id="infoOpcMenuTrabalhos">Trabalhos</div>
-            </div></a>
-
-            <a href="index.html"><div class="opcMenu">
-                <img src="image/sobre.svg">
-                <h1>Sobre</h1>
-                <div class="infoOpcMenu" id="infoOpcMenuSobre">Sobre</div>
-            </div></a>
-
-            <a href="creditos.html"><div class="opcMenu">
-                <img src="image/creditos.svg">
-                <h1>Créditos</h1>
-                <div class="infoOpcMenu" id="infoOpcMenuCreditos">Créditos</div>
-            </div></a>
-
-        </aside>
-
-        <section id="corpo">
-            <div id="caminho">
-                <p>Sobre</p>
-            </div>
-
-            <div id="conteudo">
-                <article>
-                    <h2>Quem sou eu?</h2>
-                    <p>Me chamo <b>João Victor</b>, tenho <b>16</b> anos de idade, moro no estado da Bahia e não trabalho :)</p>
-                    <h2>Programação</h2>
-                    <p>Eu começei a me interessar por T.I e programação com mais ou menos 14 anos, mas não me apronfudava muito no assunto por medo de ser muito difícil e eu não entender nada, mas aos 15 anos eu criei um servidor no Discord e o servidor precisou de um Bot para divertir a galera e para mostrar de forma automatizada algumas informações do servidor, como na minha equipe de administração não havia niguém que sabia criar bots, eu mesmo fui me aventurar no mundo da programação.</p>
-                    <p>Começei assistindo alguns tutoriais no youtube de como criar bots e conheci o <b>JavaScript</b>, que foi a linguagem que eu usei para criar o meu primeiro bot, mas naquela época eu não sabia quase nada de como programar e não conseguia fazer nada além do que eu via no próprio Youtube.</p>
-                    <p>Agora, em 2020, no meio da pandemia de Covid-19, como estamos todos (os que podem) em casa, eu resolvi me aprofundar no JavaScript, fiz um curso online gratúito da linguagem e descobri também o mundo do desenvolvimento web, que sinceramente, gostei bastante. Logo após concluir as aulas de JavaScript eu fui buscar mais informações sobre o desenvolvimento web e aprendi também o básico do <b>HTML5</b> e de <b>CSS3</b>.</p>
-                    <p>Atualmente eu faço alguns sites por conta própria para aprimorar meus conhecimentos e também estou procurando conhecer novas tecnologias como PHP, Java, Python, etc.</p>
-                    <div id="redesSociais">
-                        <a href="https://github.com/joaoscoelho" target="_blank"><img src="image/github.svg"></a>
-                        <a href="https://www.youtube.com/channel/UCgj8kDTo0O1UUKvlkm7n49g?view_as=subscriber" target="_blank"><img src="image/youtube.svg"></a>
-                    </div>
-                </article>
-            </div>
-        </section>
-
+        <h1>Calma lá meu pacerin!<br>O que exatamente você quer de mim?</h1>
+        <a href="https://joaoscoelho.github.io/Portfolio">Saber sobre</a>
+        <a href="projetos.html">Ver projetos e trabalhos</a>
     </main>
 </body>
 </html>

@@ -1,5 +1,17 @@
 import type {Metadata} from "next";
-import {Alfa_Slab_One, Geist, Geist_Mono, Rubik_Glitch, Syncopate, Wallpoet} from "next/font/google";
+import {
+  Alfa_Slab_One,
+  BhuTuka_Expanded_One,
+  Geist,
+  Geist_Mono,
+  Krona_One,
+  Michroma,
+  Play,
+  Rubik_Glitch,
+  Syncopate,
+  Unbounded,
+  Wallpoet,
+} from "next/font/google";
 import "./globals.css";
 import {SectionInViewProvider} from "@/contexts/SectionInViewContext";
 
@@ -37,6 +49,36 @@ const syncopate = Syncopate({
   weight: "400",
 });
 
+const play = Play({
+  variable: "--font-play",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const michroma = Michroma({
+  variable: "--font-michroma",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const kronaOne = Krona_One({
+  variable: "--font-krona-one",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const bhutukaExpandedOne = BhuTuka_Expanded_One({
+  variable: "--font-bhutuka-expanded-one",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata: Metadata = {
   title: "João Coelho",
   description: "Personal website of João Coelho",
@@ -57,6 +99,11 @@ export default function RootLayout({
           ${alfaSlabOne.variable} 
           ${rubikGlitch.variable} 
           ${syncopate.variable}
+          ${play.variable}
+          ${unbounded.variable}
+          ${michroma.variable}
+          ${kronaOne.variable}
+          ${bhutukaExpandedOne.variable}
           antialiased font-mono`}
       >
         <SectionInViewProvider>{children}</SectionInViewProvider>

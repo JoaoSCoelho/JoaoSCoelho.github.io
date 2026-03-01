@@ -28,8 +28,7 @@ export const SectionWrapper = ({children, sectionName}: SectionWrapperProps) => 
   }, []);
 
   return (
-    <div ref={sectionRef} id={sectionName} className="min-h-dvh h-full flex w-full flex-col">
-      <div className="header-separator h-20 w-full"></div>
+    <div ref={sectionRef} id={sectionName} className=" flex w-full flex-col">
       {children}
     </div>
   );

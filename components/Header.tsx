@@ -11,9 +11,9 @@ export function Header() {
           <header className="flex items-center justify-between px-8 h-20 py-4 w-full">
             <Link href="/" className="shrink-0">
               <Image
-                src="/logo-full.svg"
+                src="/logo-short.svg"
                 alt="Logo do projeto"
-                width={150}
+                width={60}
                 height={50}
                 className="object-contain"
                 priority
@@ -22,9 +22,12 @@ export function Header() {
 
             <HeaderNav />
 
-            <Button className="bg-blue-400 hover:bg-blue-500 text-white text-sm font-bold h-12 w-37.5 rounded-full shadow-lg shadow-blue-400/40 transition-all hover:-translate-y-0.5">
+            <Link
+              href="mailto:jv.joaocoelho@gmail.com"
+              className="flex items-center justify-center bg-blue-400 hover:bg-blue-500 text-white text-sm font-bold h-12 w-37.5 rounded-full shadow-lg shadow-blue-400/40 transition-all hover:-translate-y-0.5"
+            >
               CONTATO
-            </Button>
+            </Link>
           </header>
         </div>
       </div>

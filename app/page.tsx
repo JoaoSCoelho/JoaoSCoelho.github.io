@@ -21,7 +21,7 @@ export default function Home() {
           },
         }}
       />
-      <div className="max-w-540 mx-auto ">
+      <div className="mx-auto ">
         <Header />
         <SectionWrapper sectionName="begin">
           <BeginSection />

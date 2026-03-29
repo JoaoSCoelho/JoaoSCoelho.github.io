@@ -21,7 +21,7 @@ export default function Home() {
           },
         }}
       />
-      <div className="mx-auto ">
+      <div className="">
         <Header />
         <SectionWrapper sectionName="begin">
           <BeginSection />

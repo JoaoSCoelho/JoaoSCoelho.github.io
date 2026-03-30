@@ -28,7 +28,7 @@ export const SectionWrapper = ({children, sectionName}: SectionWrapperProps) => 
   }, []);
 
   return (
-    <div ref={sectionRef} id={sectionName} className=" flex w-full flex-col">
+    <div ref={sectionRef} id={sectionName} className="max-w-540 mx-auto flex w-full flex-col">
       {children}
     </div>
   );

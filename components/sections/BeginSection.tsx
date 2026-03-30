@@ -3,23 +3,37 @@ import {InitialBio} from "../InitialBio";
 
 export type BeginSectionProps = {};
 
+import {motion} from "framer-motion";
+
 export const BeginSection = ({}: BeginSectionProps) => {
   return (
     <>
       <div className="header-separator h-20 w-full"></div>
-      <div className="h-[calc(100dvh-80px)] relative flex px-16 items-center justify-between ">
-        <div className="w-full flex items-center">
+      <div className="h-[calc(100dvh-80px)] relative flex px-16 items-center justify-between overflow-hidden">
+        <motion.div
+          initial={{opacity: 0, x: "-50%"}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5, ease: "easeOut"}}
+          viewport={{once: false}}
+          className="w-full flex items-center drop-shadow-xl"
+        >
           <InitialBio />
-        </div>
+        </motion.div>
         <div className="absolute left-full -translate-x-[calc(100%+64px)] w-200 h-200 bg-linear-to-br from-[#d2e7ff] -z-10 to-transparent rounded-full"></div>
-        <div className="w-370 h-[90%] self-end relative">
+        <motion.div
+          initial={{opacity: 0, x: 500}}
+          whileInView={{opacity: 1, x: 0}}
+          transition={{duration: 0.5, ease: "easeOut"}}
+          viewport={{once: false}}
+          className="w-370 h-[90%] self-end relative"
+        >
           <Image
             src="/my-photo.png"
             fill
             className="object-bottom object-contain drop-shadow-[0_0_30px_#36415340]"
             alt="Foto pessoal com pose de braços cruzados"
           />
-        </div>
+        </motion.div>
         {/* <div className="font-sans h-full flex justify-center w-full flex-col drop-shadow-[0_25px_16px_#36415310]">
         <div className="w-1/2 self-start">
           <div className="w-fit">

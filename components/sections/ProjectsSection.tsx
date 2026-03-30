@@ -13,7 +13,7 @@ export const ProjectsSection = () => {
           <ProjectsCarousel
             projectsData={[
               {
-                image: "/my-finances.png",
+                image: "/Frame 7.png",
                 about: "sdasd",
                 deploy: "https://deploy.com",
                 github: "https://github.com/JoaoSCoelho/project",
@@ -25,7 +25,25 @@ export const ProjectsSection = () => {
                 github: "https://github.com/JoaoSCoelho/project",
               },
               {
-                image: "/my-finances.png",
+                image: "/Frame 8.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 9.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 10.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 7.png",
                 about: "sdasd",
                 deploy: "https://deploy.com",
                 github: "https://github.com/JoaoSCoelho/project",
@@ -37,7 +55,79 @@ export const ProjectsSection = () => {
                 github: "https://github.com/JoaoSCoelho/project",
               },
               {
+                image: "/Frame 8.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 9.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 10.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 7.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
                 image: "/my-finances.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 8.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 9.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 10.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 7.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/my-finances.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 8.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 9.png",
+                about: "sdasd",
+                deploy: "https://deploy.com",
+                github: "https://github.com/JoaoSCoelho/project",
+              },
+              {
+                image: "/Frame 10.png",
                 about: "sdasd",
                 deploy: "https://deploy.com",
                 github: "https://github.com/JoaoSCoelho/project",

@@ -13,9 +13,10 @@ export type ProjectData = {
 
 export type ProjectCardProps = {
   data: ProjectData;
+  index: number;
 };
 
-export const ProjectCard = ({data}: ProjectCardProps) => {
+export const ProjectCard = ({data, index}: ProjectCardProps) => {
   return (
     <div className="w-full">
       <div className="bg-white relative h-full w-full drop-shadow-xl rounded-2xl overflow-hidden">
@@ -38,6 +39,7 @@ export const ProjectCard = ({data}: ProjectCardProps) => {
                 Deploy
               </a>
             </Button>
+            {index}
           </div>
         </div>
       </div>

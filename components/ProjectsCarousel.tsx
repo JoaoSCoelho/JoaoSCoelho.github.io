@@ -5,16 +5,15 @@ import {Button} from "./ui/button";
 import {FcNext} from "react-icons/fc";
 import {GrFormNext} from "react-icons/gr";
 import {ArrowBigLeftDash, ArrowBigRightDash} from "lucide-react";
+import {MdArrowBackIosNew, MdArrowForwardIos} from "react-icons/md";
 
 export type ProjectsCarouselProps = {
   projectsData: ProjectData[];
 };
 
 export const ProjectsCarousel = ({projectsData}: ProjectsCarouselProps) => {
-  // const [currentIndex, setCurrentIndex] = useState(2);
   const dragStartRef = useRef([0, 0]);
-  const lastDragClientX = useRef<number[][]>([]);
-  const currentIndexRef = useRef(2);
+  const currentIndexRef = useRef(0);
   const projectsCardsRef = useRef<HTMLDivElement[]>([]);
   const rotateAngle = 22.5;
 
@@ -41,6 +40,10 @@ export const ProjectsCarousel = ({projectsData}: ProjectsCarouselProps) => {
     });
   };
 
+  useEffect(() => {
+    setStyle(true);
+  }, []);
+
   return (
     <>
       <Button
@@ -52,7 +55,7 @@ export const ProjectsCarousel = ({projectsData}: ProjectsCarouselProps) => {
           setStyle(true);
         }}
       >
-        <ArrowBigLeftDash className="w-12! h-12! text-blue-800" />
+        <MdArrowBackIosNew className="w-12! h-12! text-gray-500/70" />
       </Button>
       <div
         className="w-full whitespace-nowrap overflow-hidden relative h-140 perspective-distant touch-none select-none"
@@ -82,17 +85,13 @@ export const ProjectsCarousel = ({projectsData}: ProjectsCarouselProps) => {
         {projectsData.map((projectData, i) => {
           return (
             <div
-              style={
-                {
-                  // transition: "all 0.2s",
-                }
-              }
+              key={i}
               className={clsx("absolute -translate-x-1/2 top-1/2 -translate-y-1/2")}
               ref={(elemento) => {
                 projectsCardsRef.current[i] = elemento!;
               }}
             >
-              <ProjectCard key={i} data={projectData} index={i} />
+              <ProjectCard data={projectData} index={i} />
             </div>
           );
         })}
@@ -106,7 +105,7 @@ export const ProjectsCarousel = ({projectsData}: ProjectsCarouselProps) => {
           setStyle(true);
         }}
       >
-        <ArrowBigRightDash className="w-12! h-12! text-blue-800" />
+        <MdArrowForwardIos className="w-12! h-12! text-gray-500/70" />
       </Button>
     </>
   );

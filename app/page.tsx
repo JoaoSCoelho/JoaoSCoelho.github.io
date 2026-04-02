@@ -9,8 +9,14 @@ import {Footer} from "@/components/Footer";
 import {SocialMediaBar} from "@/components/SocialMediaBar";
 import {SocialMediaFixedBar} from "@/components/SocialMediaFixedBar";
 import {Toaster} from "react-hot-toast";
+import {useEffect} from "react";
+import {useIsDesktop} from "@/hooks/useIsDesktop";
+import {CookiesProvider, useCookies} from "react-cookie";
+import {useMobileAlert} from "@/hooks/useMobileAlert";
 
 export default function Home() {
+  const {showMobileAlert} = useMobileAlert();
+
   return (
     <>
       <Toaster
@@ -21,7 +27,7 @@ export default function Home() {
           },
         }}
       />
-      <div className="">
+      <div className="min-w-305">
         <Header />
         <SectionWrapper sectionName="begin">
           <BeginSection />

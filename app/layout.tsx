@@ -13,7 +13,7 @@ import {
   Wallpoet,
 } from "next/font/google";
 import "./globals.css";
-import {SectionInViewProvider} from "@/contexts/SectionInViewContext";
+import {BodySite} from "@/components/BodySite";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -106,7 +106,7 @@ export default function RootLayout({
           ${bhutukaExpandedOne.variable}
           antialiased font-mono`}
       >
-        <SectionInViewProvider>{children}</SectionInViewProvider>
+        <BodySite>{children}</BodySite>
       </body>
     </html>
   );
